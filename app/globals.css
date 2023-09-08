@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  height: 100%;
   @apply bg-gray-50;
 }
 
 input {
-  @apply px-2 py-1 border border-gray-300 rounded-md;
+  @apply px-2;
 }
-
-.fc-header-toolbar {
-  display: inline-block;
-  padding: 4px;
+  .fc-header-toolbar {
+    display: inline-block;
+    padding: 4px 4px;
+    
+    @apply space-x-8;
 }
 
 .fc-day {
@@ -26,29 +25,30 @@ input {
 }
 
 .fc-view {
-  @apply w-full h-full lg:h-3/4 bg-white;
+  @apply w-full h-full lg:h-3/4 xl:h-2/3 bg-white;
 }
 
 .fc-h-event {
-  @apply bg-violet-500 border border-violet-600;
+  @apply bg-blue-500 border border-blue-600 ;
+  
 }
 
-.fc .fc-daygrid-day .gc-day-today {
-  @apply bg-violet-100;
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-blue-100 ;
 }
 
-.fc .fc-button {
-  @apply bg-violet-800 hover:bg-violet-900;
+.fc .fc-button{
+  @apply bg-blue-800 hover:bg-blue-900  ;
 }
 
 .fc .fc-button-primary:not(:disabled).fc-button-active {
-  @apply bg-violet-600;
+  @apply bg-blue-600;
 }
 
 .fc .fc-button-primary:disabled {
-  @apply bg-violet-600
+  @apply bg-blue-600;
 }
-
 .fc-v-event {
-  @apply bg-violet-500 border border-violet-600;
+  @apply bg-blue-500 border border-blue-600 ;
+  
 }
