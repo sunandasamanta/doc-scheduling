@@ -1,4 +1,6 @@
 "use client"
+
+import Link from 'next/link'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { Draggable, DropArg } from '@fullcalendar/interaction'
@@ -18,11 +20,11 @@ interface Event {
 
 export default function Home() {
   const [events, setEvents] = useState([
-    { title: 'event 1', id: '1' },
-    { title: 'event 2', id: '2' },
-    { title: 'event 3', id: '3' },
-    { title: 'event 4', id: '4' },
-    { title: 'event 5', id: '5' },
+    { title: 'Fever', id: '1' },
+    { title: 'Cough', id: '2' },
+    { title: 'Typhoid', id: '3' },
+    { title: 'STD', id: '4' },
+    { title: 'Cancer', id: '5' },
   ])
   const [allEvents, setAllEvents] = useState<Event[]>([])
   const [showModal, setShowModal] = useState(false)
@@ -105,7 +107,9 @@ export default function Home() {
   return (
     <>
       <nav className="flex justify-between mb-12 border-b border-blue-100 p-4">
-        <h1 className="font-bold text-2xl text-gray-700">Calendar-Scheduling</h1>
+        <Link href="/">
+          <h1 className="font-bold text-2xl text-gray-700">Calendar-Scheduling</h1>
+        </Link>
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="grid grid-cols-10">
@@ -113,7 +117,7 @@ export default function Home() {
             <FullCalendar
               plugins={[
                 dayGridPlugin,
-                interactionPlugin,
+                interactionPlugin,                
                 timeGridPlugin
               ]}
               headerToolbar={{
